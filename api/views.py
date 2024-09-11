@@ -26,4 +26,4 @@ def get_assigments(request):
 
     dat = dict(sorted(dat.items()))
 
-    return Response([len(serDat) == 0, dat_ if len(dat_["None"]) > 0 else {} | dat])
+    return Response([len(serDat) == 0, (dat_ if len(dat_["None"]) > 0 else {}) | dat])
